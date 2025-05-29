@@ -1,0 +1,29 @@
+{
+  "name": "iobroker-mcp-server",
+  "version": "0.1.0",
+  "description": "an mcp-server to control iobroker using the rest-api adapter",
+  "main": "index.js",
+  "bin": {
+    "iobroker-agent": "index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Holger-Will/iobroker-mcp-server.git"
+  },
+  "author": "Holger Will",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Holger-Will/iobroker-mcp-server/issues"
+  },
+  "homepage": "https://github.com/Holger-Will/iobroker-mcp-server#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "zod": "^3.25.28"
+  }
+}
