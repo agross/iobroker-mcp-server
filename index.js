@@ -29,9 +29,9 @@ const token = cliArgs.token || process.env.IOB_TOKEN;
 
 let auth;
 if (authType === "bearer" && token) {
-  auth = { type: "bearer", token };
+  auth = { authType, token };
 } else if ((authType === "basic" || authType === "query") && user && pass) {
-  auth = { type: authType, user, pass };
+  auth = { authType, user, pass };
 } else {
   auth = undefined; // No auth
 }
