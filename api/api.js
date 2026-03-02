@@ -43,6 +43,10 @@ export class ioBrokerApi {
                 url.searchParams.append(key, value);
             });
         }
+        if (this.authType === 'query') {
+            url.searchParams.append('user', this.user);
+            url.searchParams.append('pass', this.pass);
+        }
         //console.log(`Fetching ${method} from ${url.toString()}`);
         return await fetch(url.toString(), {
             method: method,
