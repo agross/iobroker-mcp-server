@@ -58,6 +58,7 @@ export class ioBrokerApi {
             headers: {
                 'Content-Type': 'application/json',
                 'accept': 'application/json',
+                ...basicAuth,
             },
             body: (typeof body === "string")? body : JSON.stringify(body)
         })
