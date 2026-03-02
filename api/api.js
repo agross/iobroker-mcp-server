@@ -47,6 +47,11 @@ export class ioBrokerApi {
             url.searchParams.append('user', this.user);
             url.searchParams.append('pass', this.pass);
         }
+        const basicAuth = {};
+        if (this.authType === 'basic') {
+            const userPass = `${this.user}:${this.pass}`
+            basicAuth['Authorization'] = `Basic ${btoa(userPass)}`;
+        }
         //console.log(`Fetching ${method} from ${url.toString()}`);
         return await fetch(url.toString(), {
             method: method,
